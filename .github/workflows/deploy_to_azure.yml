@@ -12,6 +12,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Checkout Git Repository
+        uses: actions/checkout@v2
+        with:
+            repository: Azure/terraform-azurerm-avm-res-resources-resourcegroup
+            path: avm-res-resources-resourcegroup
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
